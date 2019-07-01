@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "SomeProducts",
+        "TmplIndex": 1,
+        "DataUrl":"http://localhost:43274/Api/Product/GetProductListBySiteUnid?siteUnid={siteunid}"
+    },
+    {
+        "Name": "SomeProducts2",
+        "TmplIndex": 1
+    },
+    {
+        "Name": "plugin_test",
+        "TmplIndex": 0,
+        "Tmpl":"/testwiget/wiget.plugin.test/wiget.tmpl.html",
+        "Config":"/testwiget/wiget.plugin.test/wiget.config.json"
+    }
+]
