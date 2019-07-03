@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+   
+<html lang="zh">
+    <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title></title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+     <script src="http://static.jonvie.com/js_public/jquerycomm/jquery.tmpl.min.js"></script>
+    <script src="/script/jv.ajaxview.js"></script>
+    <script src="/script/jv.ajaxwidget.js"></script>
+
+
+</head>
+<style>
+    #loading{ margin:0px;padding:0px;}
+</style>
+<script type="text/x-jquery-tmpl" id="tipsTemp">
+    <div class="ui-widget" id="tip-${MsgID}">
+        <div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+
+            <a href="javascript:doTipMsg($('#tip-${MsgID}'));" class="close" title="关闭"> X</a>
+            <p style="width:98%">
+                <span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+                <strong> ${TipTitle} ：</strong> {{html TipText}}
+            </p>
+        </div>
+    </div>
+</script>
+<script type="text/x-jquery-tmpl" id="pro">
+    <div>
+            ${Code}
+        </div>
+</script>
+<script type="text/x-jquery-tmpl" id="pro2">
+    {{if Success==false}}
+    <div>${Message}</div>
+    {{else}}
+        {{tmpl(Data) '#item'}}
+    {{/if}}
+</script>
+<script type="text/x-jquery-tmpl" id="item">
+    <div>${Name}</div>
+</script>
+
+<body style="margin: 0px; padding: 0px;">
+    <div id="selector"></div>
+
+    <div widget_area="user" widget_area_setting="/widgets/gyzhushou.user.widgetAreaSetting.json"></div>
+    <div>第二个</div>
+    <div widget_area="user2222" widget_area_setting="/widgets/gyzhushou.user22.widgetAreaSetting.json"></div>
+    <div>第三个</div>
+    <div widget_area="user22" widget_area_items="[{'Name':'SomeProducts','TmplIndex':1},{'Name':'SomeProducts','TmplIndex':0}]"></div>
+    <div>第四个</div>
+    <div widget_area="user33" widget_area_items="[{'Name':'SomeProducts','TmplIndex':1},{'Name':'SomeProducts','TmplIndex':0},{'Name':'SomeProducts','TmplIndex':2}]"></div>
+
+    <script>
+        $(function () {
+
+            var aa = new jv.ajaxView("loading",true)
+            var jonvieAjax = new jv.ajaxWidget("loading",true);
+            jonvieAjax.bulidWidgetAreas({
+                "sitekey":"gyzhushou",
+                "siteunid":"3bd1c50e-dfed-4bce-b4f3-547fb37d8d04"
+            },"class=\"dd\"","/widgets/");
+            //jonvieAjax.reqTmpl({
+            //type: "get",
+            //url: "http://localhost:43274/Api/Product/GetProductListBySiteKey",
+            //data: { "sitekey": "gyzhushou" },
+            //dataType: "json"
+            //},"#pro", "#selector",null,"append");
+
+            //jonvieAjax.reqTmpl("http://localhost:43274/Api/Product/GetProductListBySiteKey?sitekey=gyzhushou","#pro2","#selector",null,"append");
+        });
+
+        
+
+    </script>
+</body>
+</html>
