@@ -1,0 +1,6 @@
+{
+  "Name": "someproducts",
+  "Title": "产品列表",
+  "Description": "显示部分的产品列表",
+  "BaseDataUrl":"http://localhost:43274/Api/Product/GetProductListBySiteKey?sitekey={sitekey}"
+}

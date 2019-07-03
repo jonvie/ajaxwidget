@@ -1,0 +1,7 @@
+{
+  "WigetID": "A966CBBD-1BF8-4C9E-A9D1-7B55D5994C1A",
+  "Name": "",
+  "Title": "",
+  "Description": "",
+  "BaseDataUrl":"http://localhost:43274/Api/Product/GetProductListBySiteKey?sitekey={sitekey}"
+}

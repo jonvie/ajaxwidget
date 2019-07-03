@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "SomeProducts",
+        "TmplIndex": 1,
+        "DataUrl":"http://localhost:43274/Api/Product/GetProductListBySiteUnid?siteUnid={siteunid}"
+    },
+    {
+        "Name": "SomeProducts2",
+        "TmplIndex": 1
+    },
+    {
+        "Name": "plugin_test",
+        "TmplIndex": 0,
+        "Tmpl":"/testwidget/widget.plugin.test/widget.tmpl.html",
+        "Config":"/testwidget/widget.plugin.test/widget.config.json"
+    }
+]
